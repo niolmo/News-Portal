@@ -1,11 +1,13 @@
 <div class="pagination mb-5 d-flex justify-content-center fs-5">
   <span class="step-links">
     {% if page.has_previous %}
-      <a href="?page={{ page.previous_page_number }}">Previous</a>
+      <a href="?page=1">First<<<</a>
+      <a href="?page={{ page.previous_page_number }}">Previous <<</a>
     {% endif %}
     <span class="current">Page {{ page.number }} of {{ page.paginator.num_pages }}</span>
     {% if page.has_next %}
-      <a href="?page={{ page.next_page_number }}">Next</a>
+      <a href="?page={{ page.next_page_number }}">Next>></a>
+      <a href="?page={{ page.paginator.num_pages }}">Last>>></a>
     {% endif %}
   </span>
 </div>
