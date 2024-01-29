@@ -21,6 +21,7 @@ class Post_List(ListView):
     paginate_by = 6
 
 
-def post_detail(reqest, pk):
-    post = get_object_or_404(Post, id=pk, status=Post.Status.PUBLISHED)
+def post_detail(reqest, year, month, day, post):
+    post = get_object_or_404(Post, slug=post, publ__year=year,
+                             publ__month=month, publ__day=day, status=Post.Status.PUBLISHED)
     return render(reqest, 'detail.html', {'post': post})

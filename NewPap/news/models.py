@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.query import QuerySet
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 class PabMan(models.Manager):
@@ -38,6 +39,9 @@ class Post(models.Model):
         ]
         verbose_name = 'News'
         verbose_name_plural = 'News'
+
+    def get_absolute_url(self):
+        return reverse('news:post_detail', args=[self.publ.year, self.publ.month, self.publ.day, self.slug])
 
     def __str__(self):
         return self.title
