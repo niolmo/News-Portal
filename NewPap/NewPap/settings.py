@@ -109,6 +109,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "test.niolmo@yandex.ru"
+EMAIL_HOST_PASSWORD = "cfkfejtqgingkyts"
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

@@ -13,4 +13,7 @@
     </p>
     <p class="fs-2 fw-normal">{{ post.text|linebreaks }}</p>
   </div>
+  <p class="text-center">
+    <a href="{% url 'news:post_share' post.id %}" class="btn btn-success">Share this post</a>
+  </p>
 {% endblock %}
