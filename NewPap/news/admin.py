@@ -12,3 +12,10 @@ class PostAdmin(admin.ModelAdmin):
     raw_id_fields = ['author']
     date_hierarchy = 'publ'
     ordering = ['status', 'publ']
+
+
+@admin.register(Commetns)
+class CommetnsAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', 'post', 'created', 'updated']
+    list_filter = ['created', 'updated']
+    search_fields = ['name', 'email', 'body']

@@ -1,0 +1,15 @@
+{% extends 'flatpages/base.html' %}
+{% load static %}
+
+{% block title %}
+    Add comment
+{% endblock title %}
+
+{% block content %}
+    {% if comment %}
+        <h2>Comment successfully added</h2>
+        <p><a href="{{ post.get_absolute_url }}"></a></p>
+    {% else %}
+        {% include 'includes/comment_form.html' %}
+
+{% endblock  %}
