@@ -1,0 +1,15 @@
+{% extends 'flatpages/base.html' %}
+{% load static %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block content %}
+  <h1 class="w-25 text-center mx-auto mb-5">Login</h1>
+  <form method="post" class="w-25 mx-auto">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Login" class="d-block btn btn-success mt-5 mx-auto w-25" />
+  </form>
+{% endblock %}
