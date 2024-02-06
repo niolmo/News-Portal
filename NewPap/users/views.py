@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login as dj_login
+from django.contrib.auth import authenticate, login as dj_login, logout as dj_logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
@@ -25,4 +25,5 @@ def login(request):
 
 
 def logout(request):
-    return render(request, 'logout.html')
+    dj_logout(request)
+    return render(request, 'logout_user.html')
