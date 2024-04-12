@@ -116,6 +116,11 @@ EMAIL_HOST_PASSWORD = "cfkfejtqgingkyts"
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
+
+LOGIN_REDIRECT_URL = 'users/profile/'
+LOGIN_URL = '/accounts/login/'
+LOGUOT_URL = '/sing/logout'
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 

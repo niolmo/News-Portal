@@ -1,0 +1,15 @@
+{% extends 'flatpages/base.html' %}
+{% load static %}
+
+{% block title %}
+  Your page
+{% endblock %}
+
+{% block content %}
+  <h1 class="w-25 text-center mx-auto mb-5">Welcome, {{ user }}!</h1>
+  <h3 class="w-25 text-center mx-auto mb-5">What do you want?</h3>
+  <div class="mx-auto w-50 d-flex flex-row align-content-center justify-content-between">
+    <a class="btn bg-success text-white" href="{% url 'news:post_list' %}">News</a>
+    <a class="btn bg-success text-white" href="{% url 'users:logout' %}">Logout</a>
+  </div>
+{% endblock %}

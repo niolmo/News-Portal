@@ -18,12 +18,20 @@ def login(request):
             )
         if user and user.is_active:
             dj_login(request, user)
-            return HttpResponseRedirect(reverse('news:post_list'))
+            return HttpResponseRedirect(reverse('users:profile'))
         else:
             form = LoginForm()
     return render(request, 'login.html', {'form': form})
 
 
+def profile(request):
+    return render(request, 'profile.html')
+
+
 def logout(request):
     dj_logout(request)
     return render(request, 'logout_user.html')
+
+
+def signup(request):
+    pass
